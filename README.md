@@ -1,4 +1,4 @@
-# Realtime Network Website using Django
+# Realtime Network Website using Django.
 
 Youtube video: https://youtu.be/MTqjBMyVG1g
 
