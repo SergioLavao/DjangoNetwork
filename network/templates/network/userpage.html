@@ -1,0 +1,11 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+	<script type="text/babel">
+		ReactDOM.render(<UserPage user_id='{{user_id}}'/>, document.querySelector('#userPage'));
+	</script>
+
+	<div class="container" id="userPage"></div>
+
+{% endblock %}

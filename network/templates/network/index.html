@@ -1,0 +1,31 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+	<script type="text/babel">
+		ReactDOM.render(<NewPost />, document.querySelector('#newPost'));
+	</script>
+
+	<h1>New Post<h1>
+	<div class="container" id="newPost"></div>
+
+	{% if by_following %}
+	
+	<script type="text/babel">
+		ReactDOM.render(<PaginatePosts following="True"/>, document.querySelector('#followingPosts'));
+	</script>
+
+	<h1>Following Posts</h1>
+	<div class="container" id="followingPosts"></div>
+
+	{% else %}
+	
+	<script type="text/babel">
+		ReactDOM.render(<PaginatePosts />, document.querySelector('#allPosts'));
+	</script>
+	<h1>All Posts</h1>
+	<div class="container" id="allPosts"></div>
+	
+	{% endif %}
+
+{% endblock %}
